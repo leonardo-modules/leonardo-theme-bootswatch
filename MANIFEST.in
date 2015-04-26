@@ -1,0 +1,6 @@
+include LICENSE
+include MANIFEST.in
+include README.rst
+recursive-include leonardo_theme_bootswatch/static *
+recursive-include leonardo_theme_bootswatch/locale *
+recursive-include leonardo_theme_bootswatch/templates *
