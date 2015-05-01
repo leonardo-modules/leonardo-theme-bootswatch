@@ -1,5 +1,14 @@
 CHANGES
 =======
 
+0.0.2
+-----
+
+* fix descriptor
+
+0.0.1
+-----
+
+* descriptor and build informations
 * body block and wrap head
 * Initial commit
