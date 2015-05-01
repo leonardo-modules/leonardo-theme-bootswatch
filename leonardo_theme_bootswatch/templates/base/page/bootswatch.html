@@ -15,16 +15,18 @@
       <div id="banner" class="page-header">
       {% feincms_render_region feincms_page "toolbar" request %}
       </div>
-      <aside class="col1 {% get_col_classes feincms_page 'col1' %}">
-        {% feincms_render_region feincms_page "col1" request %}
-      </aside>
-      <section class="col3 {% get_col_classes feincms_page 'col3' %}">
-        {% feincms_render_region feincms_page "col3" request %}
-        {% block body_main %}{% endblock %}
-      </section>
-      <aside class="col2 {% get_col_classes feincms_page 'col2' %}">
-        {% feincms_render_region feincms_page "col2" request %}
-      </aside>
+      <div class="row">
+        <aside class="col1 {% get_col_classes feincms_page 'col1' %}">
+          {% feincms_render_region feincms_page "col1" request %}
+        </aside>
+        <section class="col3 {% get_col_classes feincms_page 'col3' %}">
+          {% feincms_render_region feincms_page "col3" request %}
+          {% block body_main %}{% endblock %}
+        </section>
+        <aside class="col2 {% get_col_classes feincms_page 'col2' %}">
+          {% feincms_render_region feincms_page "col2" request %}
+        </aside>
+      </div>
       <footer>
           {% feincms_render_region feincms_page "footer" request %}
       </footer>
