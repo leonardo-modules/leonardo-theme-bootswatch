@@ -6,35 +6,25 @@
   </head>
   <body id="{% block body_id %}{% endblock %}" ng-app='hz' class="skin-blue">
     {% include "horizon/_messages.html" %}
-    <div class="wrapper">
-      <header>
-        <div class="container">
-          {% feincms_render_region feincms_page "header" request %}
-        </div>
-      </header>
-      <div id="toolbar">
-        <div class="container">
-          {% feincms_render_region feincms_page "toolbar" request %}
-        </div>
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        {% feincms_render_region feincms_page "header" request %}
       </div>
-      <div id="main">
-        <div class="container">
-          <aside class="col1 {% get_col_classes feincms_page 'col1' %}">
-            {% feincms_render_region feincms_page "col1" request %}
-          </aside>
-          <section class="col3 {% get_col_classes feincms_page 'col3' %}">
-            {% feincms_render_region feincms_page "col3" request %}
-            {% block body_main %}{% endblock %}
-          </section>
-          <aside class="col2 {% get_col_classes feincms_page 'col2' %}">
-            {% feincms_render_region feincms_page "col2" request %}
-          </aside>
-        </div>
-      </div>
+    </div>
+    <div class="container">
+      {% feincms_render_region feincms_page "toolbar" request %}
+      <aside class="col1 {% get_col_classes feincms_page 'col1' %}">
+        {% feincms_render_region feincms_page "col1" request %}
+      </aside>
+      <section class="col3 {% get_col_classes feincms_page 'col3' %}">
+        {% feincms_render_region feincms_page "col3" request %}
+        {% block body_main %}{% endblock %}
+      </section>
+      <aside class="col2 {% get_col_classes feincms_page 'col2' %}">
+        {% feincms_render_region feincms_page "col2" request %}
+      </aside>
       <footer>
-        <div class="container">
           {% feincms_render_region feincms_page "footer" request %}
-        </div>
       </footer>
     </div>
     {% include "horizon/_scripts.html" %}
