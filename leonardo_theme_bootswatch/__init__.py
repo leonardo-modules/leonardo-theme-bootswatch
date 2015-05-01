@@ -1,7 +1,7 @@
 
 class Default(object):
 
-    apps = ['leonardo_theme_bootstrap']
+    apps = ['leonardo_theme_bootswatch']
 
 
 default = Default()
