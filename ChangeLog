@@ -1,6 +1,23 @@
 CHANGES
 =======
 
+0.0.3
+-----
+
+* respect in_appcontent_subpage and use special render tag
+* no gutter
+* body with block and clearfix
+* main content
+* no row
+* inverse
+* header
+* bootswatch extra
+* region updates
+* row
+* fix header
+* fix base template
+* update
+
 0.0.2
 -----
 
