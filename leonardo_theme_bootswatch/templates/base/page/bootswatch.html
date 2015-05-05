@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% load leonardo_tags feincms_page_tags branding i18n %}
+{% load leonardo_tags feincms_page_tags applicationcontent_tags branding i18n %}
 <html>
   <head>
     {% include "_header.html" %}
@@ -13,27 +13,31 @@
     </div>
     <div class="container">
       <div id="banner" class="page-header">
-      {% feincms_render_region feincms_page "toolbar" request %}
+        {% feincms_render_region feincms_page "toolbar" request %}
       </div>
-      <div class="bs-docs-section clearfix">
-        <div id="main-content" class="no-gutter">
-          <aside class="col1 {% get_col_classes feincms_page 'col1' %}">
-            {% feincms_render_region feincms_page "col1" request %}
-            {% render_region_tools feincms_page "col1" request %}
-          </aside>
-          <section class="col3 {% get_col_classes feincms_page 'col3' %}">
+      <div id="main-content">
+        <aside class="col1 {% get_col_classes feincms_page 'col1' %}">
+          {% feincms_render_region feincms_page "col1" request %}
+          {% render_region_tools feincms_page "col1" request %}
+        </aside>
+        <section class="col3 {% get_col_classes feincms_page 'col3' %}">
+          {% if not in_appcontent_subpage %}
             {% feincms_render_region feincms_page "col3" request %}
             {% render_region_tools feincms_page "col3" request %}
-            {% block body_main %}{% endblock %}
-          </section>
-          <aside class="col2 {% get_col_classes feincms_page 'col2' %}">
-            {% feincms_render_region feincms_page "col2" request %}
-            {% render_region_tools feincms_page "col2" request %}
-          </aside>
-        </div>
+          {% else %}
+            {% feincms_render_region_appcontent feincms_page "main" request %}
+          {% endif %}
+          {% block body_main %}{% endblock %}
+        </section>
+        {% if not in_appcontent_subpage %}
+        <aside class="col2 {% get_col_classes feincms_page 'col2' %}">
+          {% feincms_render_region feincms_page "col2" request %}
+          {% render_region_tools feincms_page "col2" request %}
+        {% endif %}
+        </aside>
       </div>
       <footer>
-          {% feincms_render_region feincms_page "footer" request %}
+        {% feincms_render_region feincms_page "footer" request %}
       </footer>
     </div>
     {% include "horizon/_scripts.html" %}
