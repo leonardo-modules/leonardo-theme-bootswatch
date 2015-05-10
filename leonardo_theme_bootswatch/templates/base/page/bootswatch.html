@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 {% load leonardo_tags feincms_page_tags applicationcontent_tags branding i18n %}
+{% load analytical %}
+
 <html>
   <head>
+    {% analytical_head_top %}
     {% include "_header.html" %}
+    {% analytical_head_bottom %}
   </head>
   <body id="{% block body_id %}{% endblock %}" ng-app='hz' class="skin-blue">
+    {% analytical_body_top %}
     {% include "horizon/_messages.html" %}
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -43,5 +48,6 @@
     {% include "horizon/_scripts.html" %}
     {% feincms_render_region feincms_page "helper" request %}
     <div id="modal_wrapper"></div>
+    {% analytical_body_bottom %}
   </body>
 </html>
