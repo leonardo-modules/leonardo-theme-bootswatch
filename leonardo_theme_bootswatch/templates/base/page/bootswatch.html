@@ -12,11 +12,11 @@
     {% analytical_body_top %}
     {% include "horizon/_messages.html" %}
     <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="{{ page.get_layout_class }}">
+      <div class="{{ feincms_page.get_layout_class }}">
         {% feincms_render_region feincms_page "header" request %}
       </div>
     </div>
-    <div class="{{ page.get_layout_class }}">
+    <div class="{{ feincms_page.get_layout_class }}">
       <div id="banner" class="page-header">
         {% feincms_render_region feincms_page "toolbar" request %}
       </div>
