@@ -8,7 +8,7 @@
     {% include "_header.html" %}
     {% analytical_head_bottom %}
   </head>
-  <body id="{% block body_id %}main_content{% endblock %}" ng-app='hz' class="skin-blue">
+  <body id="{% block body_id %}main_content{% endblock %}" ng-app='hz' class="">
     {% analytical_body_top %}
     {% include "horizon/_messages.html" %}
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -22,10 +22,10 @@
       </div>
     </div>
     <div class="{{ feincms_page.get_layout_class }}">
-      <div id="banner" class="page-header">
+      <div class="page-header">
         {% feincms_render_region feincms_page "toolbar" request %}
       </div>
-      <div id="main-content">
+      <div class="bs-docs-section">
         <aside class="col1 {% get_col_classes feincms_page 'col1' %}">
           {% feincms_render_region feincms_page "col1" request %}
           {% render_region_tools feincms_page "col1" request %}
