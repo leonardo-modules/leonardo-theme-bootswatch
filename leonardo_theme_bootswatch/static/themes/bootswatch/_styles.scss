@@ -3,7 +3,7 @@
 @import "/bootstrap/scss/bootstrap";
 
 // enforce modal margin
-.modal-dialog {
+.ekko-lightbox > .modal-dialog {
   width: auto!important;
   margin: 10px!important;
 }
