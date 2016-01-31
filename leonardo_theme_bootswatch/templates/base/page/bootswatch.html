@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% load leonardo_tags feincms_page_tags applicationcontent_tags branding i18n %}
+{% load leonardo_tags feincms_page_tags applicationcontent_tags branding i18n theme %}
 {% load analytical %}
 
 <html>
@@ -8,7 +8,8 @@
     {% include "_header.html" %}
     {% analytical_head_bottom %}
   </head>
-  <body id="{% block body_id %}main_content{% endblock %}" ng-app='hz' class="">
+  {% get_random_background as background %}
+  <body id="{% block body_id %}main_content{% endblock %}" ng-app='hz' class="" style="background-image: url('{{ background.url }}');">
     {% analytical_body_top %}
     {% include "horizon/_messages.html" %}
     <div class="navbar navbar-inverse navbar-fixed-top">
