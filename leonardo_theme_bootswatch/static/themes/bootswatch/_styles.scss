@@ -1,3 +1,9 @@
 
 // Vendor Components
 @import "/bootstrap/scss/bootstrap";
+
+// enforce modal margin
+.modal-dialog {
+  width: auto!important;
+  margin: 10px!important;
+}
