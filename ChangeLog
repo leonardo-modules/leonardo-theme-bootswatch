@@ -1,7 +1,40 @@
 CHANGES
 =======
 
-2015.1.1
+2016.2.0
+--------
+
+* Remove feincms tags
+* Final modal fix
+* Restrict important only on ekko box
+* fix modals
+* hamburger is now under tree navigation widget
+* fix rendering application content
+* some fixes
+
+2015.5.2
+--------
+
+* all themes in the SASS form
+* scheme
+* styles
+* fix to scss
+
+2015.5.1
+--------
+
+* more color variations #1
+* here is right place for hamburger
+
+2015.5.0
+--------
+
+* default body id for working messagess
+* fix template
+* fluid skin
+* update changelog
+
+2015.1.0
 --------
 
 * use leonardo analytics
