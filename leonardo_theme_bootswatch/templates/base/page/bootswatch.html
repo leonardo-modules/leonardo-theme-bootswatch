@@ -8,7 +8,12 @@
     {% include "_header.html" %}
     {% analytical_head_bottom %}
   </head>
-  <body id="{% block body_id %}main_content{% endblock %}" ng-app='hz' class="">
+  <body id="{% block body_id %}main_content{% endblock %}" ng-app='horizon.app' ng-strict-di class="">
+    <noscript>
+      <div class="javascript_disabled_alert">
+        {% trans "This application requires JavaScript to be enabled in your web browser." %}
+      </div>
+    </noscript>
     {% analytical_body_top %}
     {% include "horizon/_messages.html" %}
     <div class="navbar navbar-inverse navbar-fixed-top">
